@@ -13,7 +13,7 @@ let collection;
 export async function conectarBanco() {
   await client.connect();
 
-  const db = client.db("m7_frontend");
+  const db = client.db("Cluster0");
   collection = db.collection("chamados");
 
   await db.command({ ping: 1 });
