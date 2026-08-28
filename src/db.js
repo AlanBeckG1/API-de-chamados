@@ -14,13 +14,13 @@ export async function conectarBanco() {
   await client.connect();
 
   const db = client.db("Cluster0");
-  collection = db.collection("chamados");
+  collection = db.collection("livros");
 
   await db.command({ ping: 1 });
   console.log("MongoDB conectado.");
 }
 
-export function chamadosCollection() {
+export function livrosCollection() {
   if (!collection) {
     throw new Error("Banco não conectado.");
   }
